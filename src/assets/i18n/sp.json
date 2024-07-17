@@ -1,0 +1,109 @@
+{
+    "home": {
+        "buttons": {
+            "stats": "Estadísticas",
+            "manage": "Administrar entidades"
+        }
+    },
+    "main": {
+        "menu": "Menú",
+        "paas": {
+            "text": "Plataforma como Servicios",
+            "list": {
+                "buttons": {
+                    "create": "Crear",
+                    "details": "Ver Detalles"
+                }
+            },
+            "business": {
+                "text": "Business One",
+                "form": {
+                    "title": "Nuevo servidor Business One",
+                    "description": {
+                        "label": "Descripción",
+                        "placeholder": "",
+                        "feedback": "La descripción es obligatoria"
+                    },
+                    "ip": {
+                        "label": "URL del Servicio",
+                        "placeholder": "",
+                        "feedback": "La URL o dirección IP del servicio es obligatoria"
+                    },
+                    "port": {
+                        "label": "Puerto",
+                        "placeholder": "",
+                        "feedback": "El puerto del servicio es obligatorio"
+                    },
+                    "root_path": {
+                        "label": "Prefijo del Servicio",
+                        "placeholder": "",
+                        "feedback": "El prefijo del/de los servicio(s) no es válido"
+                    },
+                    "timeout": {
+                        "label": "Tiempo de espera para la solicitud",
+                        "placeholder": "Milisegundos",
+                        "feedback": "El tiempo de espera en milisegundos no es válido"
+                    },
+                    "username": {
+                        "label": "Usuario",
+                        "placeholder": "",
+                        "feedback": "El usuario es obligatorio"
+                    },
+                    "company": {
+                        "label": "Compañia",
+                        "placeholder": "",
+                        "feedback": "La compañia es obligatoria"
+                    },
+                    "password": {
+                        "label": "Contraseña",
+                        "placeholder": "",
+                        "feedback": "La contraseña es obligatoria"
+                    },
+                    "button": "Grabar"
+                }
+            },
+            "generic": {
+                "text": "Genérico",
+                "form": {
+                    "title": "Nuevo servidor Genérico",
+                    "description": {
+                        "label": "Descripción",
+                        "placeholder": "",
+                        "feedback": "La descripción es obligatoria"
+                    },
+                    "ip": {
+                        "label": "URL del Servicio",
+                        "placeholder": "",
+                        "feedback": "La URL o dirección IP del servicio es obligatoria"
+                    },
+                    "port": {
+                        "label": "Puerto",
+                        "placeholder": "",
+                        "feedback": "El puerto del servicio es obligatorio"
+                    },
+                    "root_path": {
+                        "label": "Prefijo del Servicio",
+                        "placeholder": "",
+                        "feedback": "El prefijo del/de los servicio(s) no es válido"
+                    },
+                    "timeout": {
+                        "label": "Tiempo de espera para la solicitud",
+                        "placeholder": "Milisegundos",
+                        "feedback": "El tiempo de espera en milisegundos no es válido"
+                    },
+                    "ssl": {
+                        "label": "SSL?",
+                        "placeholder": "",
+                        "feedback": ""
+                    },
+                    "header": {
+                        "label": "Cabecera",
+                        "placeholder": "",
+                        "feedback": "El contenido no es válido"
+                    },
+                    "button": "Grabar"
+                }
+            }
+        }
+    }
+}

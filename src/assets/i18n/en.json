@@ -1,0 +1,109 @@
+{
+    "home": {
+        "buttons": {
+            "stats": "Stats",
+            "manage": "Manage Entities"
+        }
+    },
+    "main": {
+        "menu": "Menu",
+        "paas": {
+            "text": "Platform as a Service",
+            "list": {
+                "buttons": {
+                    "create": "Create",
+                    "details": "See Details"
+                }
+            },
+            "business": {
+                "text": "Business One",
+                "form": {
+                    "title": "New Business One Server",
+                    "description": {
+                        "label": "Description",
+                        "placeholder": "",
+                        "feedback": "Description is mandatory"
+                    },
+                    "ip": {
+                        "label": "Service URL",
+                        "placeholder": "",
+                        "feedback": "Service URL is mandatory"
+                    },
+                    "port": {
+                        "label": "Port",
+                        "placeholder": "",
+                        "feedback": "Service port is required"
+                    },
+                    "root_path": {
+                        "label": "Root Path",
+                        "placeholder": "",
+                        "feedback": "Root path is not valid"
+                    },
+                    "timeout": {
+                        "label": "Timeout",
+                        "placeholder": "Milliseconds",
+                        "feedback": "Timeout is not valid"
+                    },
+                    "username": {
+                        "label": "Username",
+                        "placeholder": "",
+                        "feedback": "Username is mandatory"
+                    },
+                    "company": {
+                        "label": "Company",
+                        "placeholder": "",
+                        "feedback": "Company is mandatory"
+                    },
+                    "password": {
+                        "label": "Password",
+                        "placeholder": "",
+                        "feedback": "Password is required"
+                    },
+                    "button": "Save"
+                }
+            },
+            "generic": {
+                "text": "Generic",
+                "form": {
+                    "title": "New Generic Server",
+                    "description": {
+                        "label": "Description",
+                        "placeholder": "",
+                        "feedback": "Description is mandatory"
+                    },
+                    "ip": {
+                        "label": "Service URL",
+                        "placeholder": "",
+                        "feedback": "Service URL is mandatory"
+                    },
+                    "port": {
+                        "label": "Port",
+                        "placeholder": "",
+                        "feedback": "Service port is required"
+                    },
+                    "root_path": {
+                        "label": "Root Path",
+                        "placeholder": "",
+                        "feedback": "Root path is not valid"
+                    },
+                    "timeout": {
+                        "label": "Timeout",
+                        "placeholder": "Milisegundos",
+                        "feedback": "Timeout is not valid"
+                    },
+                    "ssl": {
+                        "label": "SSL?",
+                        "placeholder": "",
+                        "feedback": ""
+                    },
+                    "header": {
+                        "label": "Header",
+                        "placeholder": "",
+                        "feedback": "Header content is not valid"
+                    },
+                    "button": "Save"
+                }
+            }
+        }
+    }
+}

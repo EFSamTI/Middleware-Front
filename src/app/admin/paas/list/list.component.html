@@ -1,0 +1,109 @@
+<div class="row">
+    <div class="col-xxl-3 col-lg-4">
+        <div class="card card-overlay">
+            <img class="card-img img-fluid" src="assets/images/small/img-13.jpg" alt="Card image">
+            <div class="card-img-overlay p-0 d-flex flex-column">
+                <div class="card-header bg-transparent">
+                    <h4 class="card-title text-white mb-0">
+                        {{'main.paas.business.text'|translate}}
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-white mb-2"></p>
+                    <p class="card-text">
+                        <small class="text-white"></small>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="hstack gap-2 justify-content-end">
+                        <a [routerLink]="['business-one','']" class="btn btn-primary btn-sm">
+                            {{'main.paas.list.buttons.create'|translate}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+    <div class="col-xxl-3 col-lg-4" *ngIf="genericList === undefined">
+        <ng-lottie [options]="animationOptions"></ng-lottie>
+    </div>
+    <!-- end col -->
+    <div class="col-xxl-3 col-lg-4" *ngFor="let paas of businessOneList">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://api.iconify.design/mdi/encryption-secure.svg" *ngIf="paas.ssl"
+                    class="iconify float-end fs-xxs">
+                <h6 class="card-title mb-0"><i class="ri-gift-line align-middle me-1 lh-1"></i> {{paas.description}}
+                </h6>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">{{paas.ip}}</p>
+                <p class="text-muted mb-0">{{paas.root_path}}</p>
+            </div>
+            <div class="card-footer">
+                <div class="hstack gap-2 justify-content-end">
+                    <a [routerLink]="['business-one',paas.serial]" class="btn btn-primary btn-sm">
+                        {{'main.paas.list.buttons.details'|translate}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-xxl-3 col-lg-4">
+        <div class="card card-overlay">
+            <img class="card-img img-fluid" src="assets/images/small/img-0.jpg" alt="Card image">
+            <div class="card-img-overlay p-0 d-flex flex-column">
+                <div class="card-header bg-transparent">
+                    <h4 class="card-title text-white mb-0">
+                        {{'main.paas.generic.text'|translate}}
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-white mb-2"></p>
+                    <p class="card-text">
+                        <small class="text-white"></small>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="hstack gap-2 justify-content-end">
+                        <a [routerLink]="['generic','']" class="btn btn-primary btn-sm">
+                            {{'main.paas.list.buttons.create'|translate}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+    <div class="col-xxl-3 col-lg-4" *ngIf="genericList === undefined">
+        <ng-lottie [options]="animationOptions"></ng-lottie>
+    </div>
+    <!-- end col -->
+    <div class="col-xxl-3 col-lg-4" *ngFor="let paas of genericList">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://api.iconify.design/mdi/encryption-secure.svg" *ngIf="paas.ssl"
+                    class="iconify float-end fs-xxs">
+                <h6 class="card-title mb-0"><i class="ri-gift-line align-middle me-1 lh-1"></i> {{paas.description}}
+                </h6>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">{{paas.ip}}</p>
+                <p class="text-muted mb-0">{{paas.root_path}}</p>
+            </div>
+            <div class="card-footer">
+                <div class="hstack gap-2 justify-content-end">
+                    <a [routerLink]="['generic',paas.serial]" class="btn btn-primary btn-sm">
+                        {{'main.paas.list.buttons.details'|translate}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+</div><!-- end row -->

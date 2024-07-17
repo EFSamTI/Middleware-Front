@@ -1,0 +1,89 @@
+<div class="d-flex flex-row mb-2">
+    <img src="https://api.iconify.design/ep/back.svg" class="iconify back" role="button" routerLink="/admin">
+    <h4 class="mt-1" *ngIf="!isNew">{{model.serial}}</h4>
+    <h4 class="mt-1" *ngIf="isNew">{{'main.paas.generic.form.title'|translate}}</h4>
+</div>
+<div class="row" *ngIf="model===undefined">
+    <ng-lottie [options]="animationOptions"></ng-lottie>
+</div>
+<form [formGroup]="form" (ngSubmit)="save()" autocomplete="off" class="row g-3 needs-validation" novalidate
+    *ngIf="model!==undefined">
+    <!-- description -->
+    <div class="d-flex flex-column col-xxl-6 col-lg-8 col-sm-12">
+        <label for="description" class="form-label">
+            {{'main.paas.generic.form.description.label'|translate}}
+        </label>
+        <input type="text" id="description" class="form-control" [ngClass]="{'is-invalid': f['description'].errors}"
+            formControlName="description" required autofocus>
+        <div class="invalid-feedback">
+            {{'main.paas.generic.form.description.feedback'|translate}}
+        </div>
+    </div>
+    <!-- SSL -->
+    <div class="col-xxl-2 col-lg-4 col-sm-12 form-check form-switch d-flex align-items-center">
+        <input class="form-check-input" type="checkbox" role="switch" id="ssl" formControlName="ssl">
+        <label class="form-check-label mx-2" for="ssl">
+            {{'main.paas.generic.form.ssl.label'|translate}}
+        </label>
+    </div>
+    <!-- IP -->
+    <div class="d-flex flex-column col-xxl-4 col-lg-4 col-sm-12">
+        <label for="ip" class="form-label">
+            {{'main.paas.generic.form.ip.label'|translate}}
+        </label>
+        <input type="text" id="ip" class="form-control" [ngClass]="{'is-invalid': f['ip'].errors}" formControlName="ip"
+            required>
+        <div class="invalid-feedback">
+            {{'main.paas.generic.form.ip.feedback'|translate}}
+        </div>
+    </div>
+    <!-- port -->
+    <div class="d-flex flex-column col-xxl-3 col-lg-3 col-sm-12">
+        <label for="port" class="form-label">
+            {{'main.paas.generic.form.port.label'|translate}}
+        </label>
+        <input type="text" id="port" class="form-control" [ngClass]="{'is-invalid': f['port'].errors}"
+            formControlName="port" required>
+        <div class="invalid-feedback">
+            {{'main.paas.generic.form.port.feedback'|translate}}
+        </div>
+    </div>
+    <!-- root path -->
+    <div class="d-flex flex-column col-xxl-4 col-lg-5 col-sm-12">
+        <label for="root_path" class="form-label">
+            {{'main.paas.generic.form.root_path.label'|translate}}
+        </label>
+        <input type="text" id="root_path" class="form-control" [ngClass]="{'is-invalid': f['rootPath'].errors}"
+            formControlName="rootPath">
+        <div class="invalid-feedback">
+            {{'main.paas.generic.form.root_path.feedback'|translate}}
+        </div>
+    </div>
+    <!-- timeout -->
+    <div class="d-flex flex-column col-xxl-3 col-lg-4 col-sm-12">
+        <label for="timeout" class="form-label">
+            {{'main.paas.generic.form.timeout.label'|translate}}
+        </label>
+        <input type="text" id="timeout" class="form-control" [ngClass]="{'is-invalid': f['timeout'].errors}"
+            placeholder="{{'main.paas.generic.form.timeout.placeholder'|translate}}" formControlName="timeout" required>
+        <div class="invalid-feedback">
+            {{'main.paas.generic.form.timeout.feedback'|translate}}
+        </div>
+    </div>
+    <!-- header -->
+    <div class="d-flex flex-column col-xxl-9 col-lg-8 col-sm-12">
+        <label for="header" class="form-label">
+            {{'main.paas.generic.form.header.label'|translate}}
+        </label>
+        <textarea id="header" class="form-control" [ngClass]="{'is-invalid': f['header'].errors}"
+            formControlName="header"></textarea>
+        <div class="invalid-feedback">
+            {{'main.paas.generic.form.header.feedback'|translate}}
+        </div>
+    </div>
+    <!-- buttons -->
+    <div class="col-12 mt-3">
+        <button type="submit" [disabled]="form.invalid===true"
+            class="btn btn-primary stretched-link">{{'main.paas.generic.form.button'|translate}}</button>
+    </div>
+</form>

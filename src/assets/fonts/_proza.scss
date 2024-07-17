@@ -1,0 +1,34 @@
+$proza-font-dir: "./proza_libre" !default;
+
+$proza-font: "ProzaLibre" !default;
+$proza-file: #{$proza-font-dir}/#{$proza-font} !default;
+$proza-bold-src: url("#{$proza-file}-Bold.ttf") format("truetype") !default;
+$proza-extrabold-src: url("#{$proza-file}-ExtraBold.ttf") format("truetype") !default;
+$proza-medium-src: url("#{$proza-file}-Medium.ttf") format("truetype") !default;
+$proza-src: url("#{$proza-file}-Regular.ttf") format("truetype") !default;
+$proza-semibold-src: url("#{$proza-file}-SemiBold.ttf") format("truetype") !default;
+
+@font-face {
+    font-family: "#{$proza-font}-Bold";
+    src: $proza-bold-src;
+}
+
+@font-face {
+    font-family: "#{$proza-font}-ExtraBold";
+    src: $proza-extrabold-src;
+}
+
+@font-face {
+    font-family: "#{$proza-font}-Medium";
+    src: $proza-medium-src;
+}
+
+@font-face {
+    font-family: "#{$proza-font}";
+    src: $proza-src;
+}
+
+@font-face {
+    font-family: "#{$proza-font}-SemiBold";
+    src: $proza-semibold-src;
+}

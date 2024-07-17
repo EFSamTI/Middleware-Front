@@ -1,0 +1,107 @@
+[data-theme="login"] {
+    $primary: #0f52ba;
+    $secondary: #009aa6;
+    $danger: #cf352e;
+    $warning: #f3ce45;
+    $info: #009aa6;
+    $success: #6e856d;
+    $dark: #090e19;
+    $light: #cbd6cb;
+
+    --#{$prefix}font-sans-serif: "Doner-SemiBoldDisplay";
+    --#{$prefix}font-monospace: "ProzaLibre-Medium";
+    --#{$prefix}body-bg: #fefefe;
+    //shadow
+    --#{$prefix}shadow: rgba(22, 34, 63, .06) 0px 2px 4px -1px;
+    --#{$prefix}shadow-sm: 0 .125rem .25rem rgba(22, 34, 63, .075);
+    --#{$prefix}shadow-lg: 0 5px 10px rgba(22, 34, 63, .12);
+    --#{$prefix}element-shadow: none;
+    --#{$prefix}grid-gutter-width: 1.10rem;
+    //border radius
+    --#{$prefix}border-radius: 0;
+    --#{$prefix}card-border-width-custom: 0;
+    --#{$prefix}card-header-border-width: 0;
+    --#{$prefix}card-bottom-padding: 0;
+    --#{$prefix}card-shadow:var(--#{$prefix}shadow);
+    //topbar
+    --#{$prefix}page-title-box-shadow: 0 1px 2px rgba(22, 34, 63, .12);
+    --#{$prefix}page-title-border: 0;
+
+    &[data-topbar="light"] {
+        --#{$prefix}header-bg:#{$white};
+        --#{$prefix}header-item-color:#{$gray-800};
+        --#{$prefix}header-border-color:#{$gray-200};
+        --#{$prefix}header-item-sub-color:var(--#{$prefix}secondary-color);
+        --#{$prefix}topnav-bg: #{$white};
+        --#{$prefix}topnav-item-color: #{darken($gray-600, 10%)};
+        --#{$prefix}topnav-item-color-active: #{$primary};
+        --#{$prefix}topnav-sub-item-color: #{darken($gray-600, 10%)};
+        --#{$prefix}topnav-sub-item-color-active: #{$primary};
+    }
+
+    //footer
+    --#{$prefix}footer-bg:#{$white};
+    --#{$prefix}footer-color:#16223f;
+    //boxed
+    --#{$prefix}boxed-body-bg:#cbd6cb;
+
+    &[data-topbar="dark"] {
+        --#{$prefix}header-bg: #{shift-color($primary,40%)};
+        --#{$prefix}header-item-color: #{tint-color($primary,50%)};
+        --#{$prefix}header-item-sub-color: #{tint-color($primary,30%)};
+        --#{$prefix}header-border-color: #{shift-color($primary,30%)};
+        --#{$prefix}topbar-user-color: #{tint-color($primary, 50%)};
+        --#{$prefix}topnav-bg: #{shift-color($primary, 40%)};
+        --#{$prefix}topnav-item-color: #{tint-color($primary, 50%)};
+        --#{$prefix}topnav-item-color-active: #{$white};
+        --#{$prefix}topnav-sub-item-color: #{darken($gray-600, 10%)};
+        --#{$prefix}topnav-sub-item-color-active: #{$primary};
+    }
+
+    $custom-theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "danger": $danger,
+        "warning": $warning,
+        "info": $info,
+        "success": $success,
+        "dark": $dark,
+        "light": $light
+    );
+
+@each $name, $value in $custom-theme-colors {
+    --#{$prefix}#{$name}: #{$value};
+    --#{$prefix}#{$name}-rgb: #{to-rgb($value)};
+    --#{$prefix}#{$name}-bg-subtle: #{rgba($value, 0.15)};
+    --#{$prefix}#{$name}-border-subtle: #{rgba($value, 0.30)};
+    --#{$prefix}#{$name}-text-emphasis: #{shade-color($value, 20%)};
+}
+
+--#{$prefix}link-color: #{$primary};
+--#{$prefix}link-color-rgb: #{to-rgb($primary)};
+--#{$prefix}link-hover-color: #{shade-color($primary, 20%)};
+--#{$prefix}link-hover-color-rgb: #{to-rgb(shade-color($primary, 20%))};
+
+$font-sizes: (
+    "3xs": 0.6875rem,
+    "2xs": 0.75rem,
+    "xs": 0.8125rem,
+    "sm": 0.875rem,
+    "md": 0.9375rem,
+    "base": 0.875rem,
+    "lg": 1rem,
+    "xl": 1.0625rem,
+    "2xl": 1.125rem,
+    "3xl": 1.25rem,
+    "4xl": 1.375rem,
+    "5xl": 1.5rem,
+);
+
+@each $name, $value in $font-sizes {
+    --#{$prefix}font-#{$name}: #{$value};
+}
+
+// @each $name, $value in $font-weights {
+//     --#{$prefix}font-weight-#{$name}: #{$value};
+// }
+}

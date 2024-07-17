@@ -1,0 +1,20 @@
+<!-- Begin page -->
+<div class="container-fluid">
+    <div class="row justify-content-center min-vh-100">
+        <div class="col-12">
+            <div class="d-flex flex-column h-100">
+                <div class="row flex-grow-1">
+                    <!-- Main Content -->
+                    <router-outlet></router-outlet>
+                </div>
+                <div class="row">
+                    <!-- Footer -->
+                    <app-footer></app-footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Right Side Bar -->
+<!-- <app-rightsidebar (settingsButtonClicked)="onSettingsButtonClicked()"></app-rightsidebar> -->
+<ngx-spinner type="ball-clip-rotate"></ngx-spinner>

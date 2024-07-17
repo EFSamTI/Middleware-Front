@@ -1,0 +1,13 @@
+{
+    "/auth": {
+        "target": "https://master:8443",
+        "secure": true,
+        "logLevel": "info",
+        "changeOrigin": true
+    },
+    "/api": {
+        "target": "http://localhost:8080/v1",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

@@ -1,0 +1,164 @@
+// @import "node_modules/bootstrap/scss/functions";
+// @import "node_modules/bootstrap/scss/variables";
+// @import "node_modules/bootstrap/scss/mixins";
+
+.home-card img.iconify {
+    color: $header-item-color;
+}
+
+.home-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.home-card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid $header-border-color;
+    background-color: $header-bg;
+    height: 32px;
+    width: 300px;
+    margin: 0 8px 16px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+}
+
+.home-card-container .home-card:not(:last-child) {
+    margin-right: 0;
+}
+
+.home-card.home-card-small {
+    height: 16px;
+    width: 168px;
+}
+
+.home-card-container .home-card:not(.highlight-card) {
+    cursor: pointer;
+}
+
+.home-card-container .home-card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    // box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    box-shadow: --shadow-sm;
+}
+
+.home-card-container .home-card:not(.highlight-card):hover .iconify {
+    // fill: rgb(105, 103, 103);
+    filter: drop-shadow(0 1px 4px $topnav-item-color-active);
+}
+
+// .home-card.highlight-card {
+//     background-color: #1976d2;
+//     color: white;
+//     font-weight: 600;
+//     border: none;
+//     width: auto;
+//     min-width: 30%;
+//     position: relative;
+// }
+
+footer.home {
+    font-family: "Doner-ExtraLightText";
+    font-size: x-small;
+}
+
+
+.home-card.home-card span {
+    margin-left: 60px;
+    color: $topnav-item-color;
+    // font-weight: .9375rem;
+    font-size: small;
+}
+
+.home-card-container .home-card:hover span {
+    color: $topnav-item-color-active;
+}
+
+.navbar-menu {
+    background: $white;
+    border-right: $vertical-menu-border;
+}
+
+img.iconify {
+    // height: 24px;
+    width: auto;
+}
+
+img.back {
+    height: 28px;
+}
+
+.card-overlay {
+    .card-header {
+        img.back {
+            filter: invert(100%) sepia(56%) saturate(2%) hue-rotate(326deg) brightness(112%) contrast(100%);
+        }
+    }
+}
+
+img.iconify:not(:last-child) {
+    margin-right: 8px;
+}
+
+img.iconify {
+
+    @if is(data-theme="interaction") {
+        // filter: invert(62%) sepia(100%) saturate(396%) hue-rotate(135deg) brightness(87%) contrast(98%);
+        // filter: invert(32%) sepia(52%) saturate(4739%) hue-rotate(205deg) brightness(106%) contrast(94%);
+        filter: invert(13%) sepia(38%) saturate(7034%) hue-rotate(214deg) brightness(95%) contrast(102%);
+    }
+
+    @else if is(data-theme="creative") {
+        filter: invert(35%) sepia(96%) saturate(384%) hue-rotate(127deg) brightness(96%) contrast(95%);
+    }
+
+    @else if is(data-theme="modern") {
+        filter: invert(75%) sepia(38%) saturate(335%) hue-rotate(95deg) brightness(89%) contrast(84%);
+    }
+
+    @else if is(data-theme="material") {
+        filter: invert(27%) sepia(17%) saturate(6464%) hue-rotate(229deg) brightness(95%) contrast(92%);
+    }
+
+    @else if is(data-theme="minimal") {
+        filter: invert(42%) sepia(100%) saturate(359%) hue-rotate(176deg) brightness(93%) contrast(103%);
+    }
+
+}
+
+img.h-42 {
+    height: 42px;
+}
+
+@if $enable-dark-mode {
+    @include color-mode(dark, true) {
+        img.iconify {
+            @if is(data-theme="interaction") {
+                filter: invert(99%) sepia(0%) saturate(1556%) hue-rotate(82deg) brightness(115%) contrast(91%);
+            }
+
+            @else if is(data-theme="creative") {
+                filter: invert(100%) sepia(0%) saturate(217%) hue-rotate(58deg) brightness(114%) contrast(94%);
+            }
+
+            @else if is(data-theme="modern") {
+                filter: invert(100%) sepia(0%) saturate(217%) hue-rotate(58deg) brightness(114%) contrast(94%);
+            }
+
+            @else if is(data-theme="material") {
+                filter: invert(99%) sepia(98%) saturate(3%) hue-rotate(206deg) brightness(105%) contrast(96%);
+            }
+
+            @else if is(data-theme="minimal") {
+                filter: invert(100%) sepia(56%) saturate(2%) hue-rotate(326deg) brightness(112%) contrast(100%);
+            }
+        }
+    }
+}

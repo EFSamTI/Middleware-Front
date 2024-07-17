@@ -1,0 +1,20 @@
+$doner-font-dir: "./Doner" !default;
+
+$doner-font: "Doner" !default;
+$doner-file: #{$doner-font-dir}/#{$doner-font} !default;
+$doner-semibold-src: url("#{$doner-file}-SemiBoldDisplay.ttf") format("truetype"),
+    url("#{$doner-file}-SemiBoldDisplay.woff") format("woff"),
+    url("#{$doner-file}-SemiBoldDisplay.woff2") format("woff2") !default;
+$doner-extralight-src: url("#{$doner-file}-ExtraLightText.ttf") format("truetype"),
+    url("#{$doner-file}-ExtraLightText.woff") format("woff"),
+    url("#{$doner-file}-ExtraLightText.woff2") format("woff2") !default;
+
+@font-face {
+    font-family: "#{$doner-font}-SemiBoldDisplay";
+    src: $doner-semibold-src;
+}
+
+@font-face {
+    font-family: "#{$doner-font}-ExtraLightText";
+    src: $doner-extralight-src;
+}

@@ -1,0 +1,25 @@
+<!-- <div id="chart">
+    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [dataLabels]="chartOptions.dataLabels"
+        [plotOptions]="chartOptions.plotOptions" [yaxis]="chartOptions.yaxis" [xaxis]="chartOptions.xaxis"
+        [fill]="chartOptions.fill" [title]="chartOptions.title"></apx-chart>
+</div> -->
+
+<div class="container d-flex flex-column">
+    <div>
+        <div class="d-flex align-items-center justify-content-center">
+            <img class="img-fluid" src="assets/images/cropped-eurofish-fav2-192x192.webp" />
+        </div>
+    </div>
+    <div>
+        <div class="home-card-container py-5">
+            <button class="home-card" (click)="navigate('/stats')">
+                <img src="https://api.iconify.design/foundation/graph-pie.svg" class="iconify back">
+                <span class="mx-2 text-uppercase">{{'home.buttons.stats'|translate}}</span>
+            </button>
+            <button class="home-card" (click)="navigate('/admin')">
+                <img src="https://api.iconify.design/simple-icons/keycloak.svg" class="iconify back">
+                <span class="mx-2 text-uppercase">{{'home.buttons.manage'|translate}}</span>
+            </button>
+        </div>
+    </div>
+</div>
