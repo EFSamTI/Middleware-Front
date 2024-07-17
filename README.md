@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 
+Run `ng build -c production` for production.
+
 ## .env
 ```
 AUTHOTITY=https://integrador.eurofish.com.ec:8443
@@ -12,18 +14,27 @@ CLIENT_ID=EU-FRONTEND-ADMIN
 API_URL=https://integrador.eurofish.com.ec:8491/v1/api
 ```
 
+## nginx.config
+```
+server {
+    listen 80;
+    listen 443 ssl;
+    server_name integrador.eurofish.com.ec;
+    ssl_certificate /etc/nginx/certs/eurofish_com_ec.pem;
+    ssl_certificate_key /etc/nginx/certs/eurofish.key;
+}
+```
+
 ## Dockerfile
 ```dockerfile
-FROM node:22.4.1-alpine3.20 as build-step
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+FROM nginx
 
-RUN apk add --no-cache bash
+COPY nginx.conf /etc/nginx/conf.d/nginx.conf
+COPY /certs /etc/nginx/certs
+COPY middleware-admin /etc/nginx/html
 
-RUN npm install -g npm@10.8.2
-RUN npm install -g @angular/cli@18.1.0
-
-COPY frontend /usr/src/app
+EXPOSE 80
+EXPOSE 443
 ```
 
 ## docker-compose
@@ -35,8 +46,8 @@ services:
             context: .
         restart: unless-stopped
         ports:
-            - "443:4200"
-        command: bash -c "npm install && ng serve --host 0.0.0.0 --port 443 --public-host integrador.eurofish.com.ec --ssl true --ssl-cert src/assets/certs/eurofish_com_ec.pem --ssl-key src/assets/certs/eurofish.key --disable-host-check"
+            - "80:80"
+            - "443:443"
         environment:
             - AUTHOTITY=${AUTHOTITY}
             - REDIRECT_URL=${REDIRECT_URL}
