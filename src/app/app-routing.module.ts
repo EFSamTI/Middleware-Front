@@ -28,6 +28,10 @@ const routes: Routes = [
     component: AdminLayoutComponent,
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    redirectTo: '404'
   }
 ];
 

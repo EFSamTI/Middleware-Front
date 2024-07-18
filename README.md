@@ -22,6 +22,12 @@ server {
     server_name integrador.eurofish.com.ec;
     ssl_certificate /etc/nginx/certs/eurofish_com_ec.pem;
     ssl_certificate_key /etc/nginx/certs/eurofish.key;
+
+    location / {
+        root /etc/nginx/html;
+        index index.html;
+        try_files $uri $uri/ /index.html =404;
+    }
 }
 ```
 

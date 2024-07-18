@@ -8,6 +8,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { TopbarComponent } from './layout/topbar/topbar.component';
 import { LoginComponent } from './login/login.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component';
     LayoutComponent,
     TopbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
